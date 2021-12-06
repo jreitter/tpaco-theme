@@ -1,0 +1,43 @@
+@use 'abstracts' as *;
+
+// --------------------------------- Globals ---------------------------------
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    color: $col-dark;
+    background-color: $col-text;
+}
+
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+#control {
+    margin-top: 0 !important;
+}
+
+body {
+    font-size: 1.8rem;
+    line-height: 1.7;
+    background-color: $col-dark;
+    color: #fff;
+    font-family: $font-main;
+    font-weight: 300;
+    height: 100%;
+    position: relative;
+}
+
+.content {
+    margin: 15rem 0 10rem;
+}
+
+a {
+    color: orange;
+}
+
+strong {
+    font-weight: 600;
+}

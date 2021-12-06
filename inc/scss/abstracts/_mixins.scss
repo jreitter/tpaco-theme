@@ -1,0 +1,16 @@
+// --------------------------------- Mixins ---------------------------------
+@mixin bpmax($breakpoint) {
+    @media all and (max-width:($breakpoint+px)) {
+        @content;
+    }
+}
+@mixin bpmin($breakpoint) {
+    @media all and (min-width:($breakpoint+px)) {
+        @content;
+    }
+}
+@mixin bpminmax($breakpointmin, $breakpointmax) {
+    @media all and (min-width:($breakpointmin+px)) and (max-width:($breakpointmax+px)) {
+        @content;
+    }
+}

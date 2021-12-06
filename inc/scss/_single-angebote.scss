@@ -1,0 +1,88 @@
+@use 'abstracts' as *;
+
+// --------------------------------- Styles ---------------------------------
+.single {
+    h1 {
+        margin-bottom: 6rem;
+    }
+
+    .card--info {
+        margin-bottom: 0;
+    }
+
+    .table {
+        overflow-x: auto;
+
+        table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+
+            td {
+                width: 25%;
+            }
+
+            thead {
+                color: $col-text;
+                margin-bottom: 0.5rem;
+                border-bottom: 1px solid $col-sec;
+            }
+
+            th, td {
+                padding: 1rem;
+                min-width: 15rem;
+            }
+
+            tr:not(:last-of-type) {
+                border-bottom: 1px solid $col-sec;
+            }
+        }
+    }
+}
+
+.wrapper--the-content {
+    margin: 10rem 0;
+}
+
+.wrapper--single-card {
+    margin: 10rem 0;
+
+    .card--button {
+        margin: 3rem auto 0;
+    }
+}
+
+.card--single {
+    background-color: $col-card;
+    padding: 3rem;
+
+    @extend .radius;
+    @extend .shadow;
+}
+
+.title--single-section {
+    margin-bottom: 3rem;
+}
+
+.gallery--single {
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 3rem;
+
+        li {
+            flex: 1 1 20%;
+        }
+    }
+
+    img {
+        vertical-align: middle;
+        width: 100%;
+        height: auto;
+        
+        @extend .radius, .shadow;
+    }
+}

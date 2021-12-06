@@ -1,0 +1,84 @@
+@use 'abstracts' as *;
+
+// --------------------------------- Footer ---------------------------------
+.footer--seperator {
+    position: relative;
+
+    .seperator--mountains {
+        position: relative;
+        vertical-align: middle;
+        width: 100%;
+        margin-bottom: -1px;
+        z-index: 5;
+    }
+
+}
+
+.footer--main {
+    background-color: $col-sec;
+    padding: 4rem 2rem;
+    position: relative;
+    z-index: 5;
+
+    .footer--top,
+    .footer--bottom {
+        max-width: 130rem;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .footer--top {
+        margin-bottom: 3rem;
+
+        li {
+            display: inline-block;
+
+            &:nth-of-type(1) {
+                margin-right: 3rem;
+            }
+        }
+
+        a {
+            font-size: 2.5rem;
+            font-family: $font-accent;
+            text-decoration: underline;
+        }
+    }
+
+    address,
+    .footer--menue {
+        font-size: 1.6rem;
+        font-style: normal;
+        opacity: 0.5;
+
+        li {
+            @include bpmin(500) {
+                display: inline-block;
+                margin-left: 1rem;
+            }
+        }
+
+        .social {
+            margin: 2rem 0 2rem;
+            text-align: right;
+
+            @include bpmin(700) {
+                margin: 0 0 2rem;
+            }
+
+        }
+    }
+}

@@ -1,0 +1,61 @@
+@use 'abstracts' as *;
+
+// --------------------------------- Content Alps ---------------------------------
+.content--alps {
+    position: relative;
+    margin-top: 15rem !important;
+
+    .wrapper--flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+
+    .wrapper--text {
+        padding-top: 0;
+        margin-top: 10rem;
+        @include bpmin(700) {
+            max-width: 80%;
+        }
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+}
+
+[data-aos="fade-down-alt"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+  
+    &.aos-animate {
+      opacity: 1;
+      transform: translateY(-8rem) !important;
+    }
+  }
+
+.wrapper--alp-image {
+    position: relative;
+    flex: calc(50% - 4rem);
+
+    @include bpmin(700) {
+        flex: calc(25% - 4rem);
+    }
+
+    .alp--image {
+        width: 100%;
+        vertical-align: middle;
+
+        @extend .shadow, .radius;
+    }
+
+    .icon--alp {
+        width: 6rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -3rem;
+        opacity: 0.5;
+    }
+}
