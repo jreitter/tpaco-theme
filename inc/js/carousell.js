@@ -20,6 +20,10 @@ $('.wrapper--proof').slick({
         }
       ]
   });
+  
+  $(window).resize(function(){
+    $('.wrapper--proof').slick('resize');
+  });
 
   $('.next--slider').click(function(){
     $('.wrapper--proof').slick("slickNext");
